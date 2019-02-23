@@ -9,7 +9,7 @@ import android.view.View
 
 class ChartView: View {
     var rate:Float = 0f // 0 - 100の間で指定
-    var notClockWise:Boolean = false //false 時計回り true 反時計回り
+    var isNotClockWise:Boolean = false //false 時計回り true 反時計回り
 
     /**
      * コンストラクタ
@@ -53,7 +53,7 @@ class ChartView: View {
         paint.strokeCap = Paint.Cap.ROUND
         val rect = RectF(storkeWidth/2, storkeWidth/2, getWidth().toFloat()-storkeWidth/2, getHeight().toFloat()-storkeWidth/2)
         var angle = rate / 100 * 360 //円グラフの終了位置の指定
-        if (notClockWise) {
+        if (isNotClockWise) {
             //反時計周りの場合はマイナスにする
             angle *= -1
         }

@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
      * グラフをアニメーションで表示
      */
     private fun drawChart(){
-        chartView.notClockWise = checkNotClockWise.isChecked
+        chartView.isNotClockWise = checkNotClockWise.isChecked
 
         val rateString:String = editRate.getText().toString()
         val rate:Int = Integer.parseInt(rateString)
